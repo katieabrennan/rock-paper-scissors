@@ -12,7 +12,7 @@ if (getComputerChoice(1, 3) === 1) {
 }
 
 
-let playerSelection = "rock"; //player selection will come from text input
+let playerSelection = prompt("rock, paper or scissors?");
 
 
 function playRound(playerSelection, computerSelection) {
