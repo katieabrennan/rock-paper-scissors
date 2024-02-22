@@ -11,9 +11,10 @@ if (getComputerChoice(1, 3) === 1) {
     answer = "scissors";
 }
 
-const playerSelection = "rock";
+const playerSelection = "rock"; //player selection will come from text input
 const computerSelection = getComputerChoice();
 console.log(playerSelection, answer);
+
 
 
 
