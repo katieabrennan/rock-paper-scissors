@@ -7,21 +7,25 @@ let playerScore = 0
 
 const results = document.querySelector("#results");
 
+// 1 = rock
+// 2 = paper 
+// 3 = scissors
+
 
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection.toLowerCase() === "rock") {
 
         if (computerSelection === 1) {
-            results.textContent = `It's a tie! You both selected ${playerSelection} 
+            results.textContent = `It's a tie! You both selected rock. 
             You: ${playerScore} - Computer: ${compScore}`;
         } else if (computerSelection === 2) {
             compScore++
-            results.textContent = `You lose! ${computerSelection} beats ${playerSelection}
+            results.textContent = `You lose! ${computerSelection} beats rock.
             You: ${playerScore} - Computer: ${compScore}`;
         } else {
             playerScore++
-            results.textContent = `You win! ${playerSelection} beats ${computerSelection}
+            results.textContent = `You win! Rock beats ${computerSelection}.
             You: ${playerScore} - Computer: ${compScore}`;
         }
 
@@ -29,14 +33,14 @@ function playRound(playerSelection, computerSelection) {
 
         if (computerSelection === 1) {
             playerScore++
-            results.textContent = `You win! ${playerSelection} beats ${computerSelection}
+            results.textContent = `You win! Paper beats ${computerSelection}.
             You: ${playerScore} - Computer: ${compScore}`;
         } else if (computerSelection === 2) {
-            results.textContent = `It's a tie! You both selected ${playerSelection} 
+            results.textContent = `It's a tie! You both selected paper. 
             You: ${playerScore} - Computer: ${compScore}`;
         } else {
             compScore++
-            results.textContent = `You lose! ${computerSelection} beats ${playerSelection};
+            results.textContent = `You lose! ${computerSelection} beats paper.
             You: ${playerScore} - Computer: ${compScore}`;
         }
 
@@ -44,19 +48,23 @@ function playRound(playerSelection, computerSelection) {
 
         if (computerSelection === 1) {
             compScore++
-            results.textContent = `You lose! ${computerSelection} beats ${playerSelection}
+            results.textContent = `You lose! ${computerSelection} beats scissors.
             You: ${playerScore} - Computer: ${compScore}`;
         } else if (computerSelection === 2) {
             playerScore++
-            results.textContent = `You win! ${playerSelection} beats ${computerSelection}
+            results.textContent = `You win! Scissors beats ${computerSelection}
             You: ${playerScore} - Computer: ${compScore}`;
         } else {
-            results.textContent = `It's a tie! You both selected ${playerSelection} 
+            results.textContent = `It's a tie! You both selected scissors. 
             You: ${playerScore} - Computer: ${compScore}`;
         }
     }
 
 }
+
+// if playerScore || computerScore === 5 {
+//     results.textContent = `You won 5 games! You are the winner!`
+// }
 
 
 const btnRock = document.querySelector("#rock");
