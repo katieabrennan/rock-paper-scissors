@@ -21,11 +21,11 @@ function playRound(playerSelection, computerSelection) {
             You: ${playerScore} - Computer: ${compScore}`;
         } else if (computerSelection === 2) {
             compScore++
-            results.textContent = `You lose! ${computerSelection} beats rock.
+            results.textContent = `You lose! Paper beats rock.
             You: ${playerScore} - Computer: ${compScore}`;
         } else {
             playerScore++
-            results.textContent = `You win! Rock beats ${computerSelection}.
+            results.textContent = `You win! Rock beats Scissors.
             You: ${playerScore} - Computer: ${compScore}`;
         }
 
@@ -33,14 +33,14 @@ function playRound(playerSelection, computerSelection) {
 
         if (computerSelection === 1) {
             playerScore++
-            results.textContent = `You win! Paper beats ${computerSelection}.
+            results.textContent = `You win! Paper beats rock.
             You: ${playerScore} - Computer: ${compScore}`;
         } else if (computerSelection === 2) {
             results.textContent = `It's a tie! You both selected paper. 
             You: ${playerScore} - Computer: ${compScore}`;
         } else {
             compScore++
-            results.textContent = `You lose! ${computerSelection} beats paper.
+            results.textContent = `You lose! Scissors beats paper.
             You: ${playerScore} - Computer: ${compScore}`;
         }
 
@@ -48,11 +48,11 @@ function playRound(playerSelection, computerSelection) {
 
         if (computerSelection === 1) {
             compScore++
-            results.textContent = `You lose! ${computerSelection} beats scissors.
+            results.textContent = `You lose! Rock beats scissors.
             You: ${playerScore} - Computer: ${compScore}`;
         } else if (computerSelection === 2) {
             playerScore++
-            results.textContent = `You win! Scissors beats ${computerSelection}
+            results.textContent = `You win! Scissors beats paper.
             You: ${playerScore} - Computer: ${compScore}`;
         } else {
             results.textContent = `It's a tie! You both selected scissors. 
