@@ -5,19 +5,24 @@ function getComputerChoice(min, max) {
 let compScore = 0
 let playerScore = 0
 
+
 const results = document.querySelector("#results");
 
 // 1 = rock
 // 2 = paper 
 // 3 = scissors
 
+function resetGame() {
+    compScore = 0;
+    playerScore = 0;
+}
 
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection.toLowerCase() === "rock") {
 
         if (computerSelection === 1) {
-            results.textContent = `It's a tie! You both selected rock. 
+            results.textContent = `It's a tie! You both selected rock.
             You: ${playerScore} - Computer: ${compScore}`;
         } else if (computerSelection === 2) {
             compScore++
@@ -60,11 +65,18 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-}
+    if (compScore === 5) {
+        results.textContent = ` `;
+        alert("Computer won 5 rounds, they are the winner of this game!");
+        resetGame();
+    }
 
-// if playerScore || computerScore === 5 {
-//     results.textContent = `You won 5 games! You are the winner!`
-// }
+    if (playerScore === 5) {
+        results.textContent = ` `;
+        alert("You won 5 rounds, you are the winner of this game!");
+        resetGame();
+    }
+}
 
 
 const btnRock = document.querySelector("#rock");
